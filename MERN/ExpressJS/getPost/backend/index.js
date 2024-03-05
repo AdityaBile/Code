@@ -13,6 +13,14 @@ app.get("/register", (req, res) => {
   );
 });
 
+// parse POST request => extract important dat (key:value)
+app.use(express.urlencoded({ extended: true })); // middleware to parse url encoded bodies
+// Option if body contain json data then use below also
+app.use(express.json());
+
 app.post("/register", (req, res) => {
-  res.send(`This from post`);
+  // res.send(`This from post`);
+  let { user, pass } = req.body;
+  console.log(req.body);
+  res.send(`From POST, Hi ${user} and your set password is ${pass}`);
 });
