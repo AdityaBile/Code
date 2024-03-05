@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Functions</title>
+  </head>
+  <body>
+    <h1>Hello World</h1>
+  </body>
+  <script>
+    function greet(names, greeting = "Good Afternoon") {
+      console.log(greeting + " " + names);
+      console.log(names + " " + "is a good person");
+    }
+    name1 = "Aditya";
+    name2 = "Atharva";
+    greeting1 = "Good morning";
+    greeting2 = "Good Evening";
+    greet(name1);
+
+    function sum(a, b, c) {
+      let d = a + b + c;
+      return d;
+      // console.log(d);
+    }
+    let answer = sum(3, 5, 7);
+    console.log(answer);
+  </script>
+</html>

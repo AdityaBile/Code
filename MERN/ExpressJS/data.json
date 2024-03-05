@@ -1,0 +1,74 @@
+{
+  "users": [
+    {
+      "name": "Alice",
+      "followers": 1000,
+      "following": 500,
+      "posts": [
+        {
+          "likes": 200,
+          "image": "https://unsplash.com/photos/a-man-taking-a-picture-of-the-sunset-with-a-camera-StbFt6TU1xs",
+          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+        },
+        {
+          "likes": 150,
+          "image": "https://unsplash.com/photos/a-man-taking-a-picture-of-the-sunset-with-a-camera-StbFt6TU1xs",
+          "description": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        }
+      ]
+    },
+    {
+      "name": "Bob",
+      "followers": 500,
+      "following": 200,
+      "posts": [
+        {
+          "likes": 300,
+          "image": "https://unsplash.com/photos/a-man-taking-a-picture-of-the-sunset-with-a-camera-StbFt6TU1xs",
+          "description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+        }
+      ]
+    },
+    {
+      "name": "Charlie",
+      "followers": 2000,
+      "following": 1000,
+      "posts": [
+        {
+          "likes": 500,
+          "image": "https://unsplash.com/photos/a-man-taking-a-picture-of-the-sunset-with-a-camera-StbFt6TU1xs",
+          "description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+        },
+        {
+          "likes": 100,
+          "image": "https://unsplash.com/photos/a-man-taking-a-picture-of-the-sunset-with-a-camera-StbFt6TU1xs",
+          "description": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        }
+      ]
+    },
+    {
+      "name": "Eve",
+      "followers": 300,
+      "following": 100,
+      "posts": [
+        {
+          "likes": 50,
+          "image": "https://unsplash.com/photos/a-man-taking-a-picture-of-the-sunset-with-a-camera-StbFt6TU1xs",
+          "description": "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt."
+        }
+      ]
+    },
+    {
+      "name": "Mallory",
+      "followers": 1500,
+      "following": 700,
+      "posts": [
+        {
+          "likes": 400,
+          "image": "https://unsplash.com/photos/a-man-taking-a-picture-of-the-sunset-with-a-camera-StbFt6TU1xs",
+          "description": "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem."
+        }
+      ]
+    }
+  ]
+}

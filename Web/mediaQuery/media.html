@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Media Query</title>
+    <style>
+      .Box {
+        display: none; /* imp  */
+        font-size: 50px;
+        background-color: tomato;
+        /* border: 2px solid black; */
+        color: whitesmoke;
+      }
+      @media (max-width: 500px) {
+        #box1 {
+          display: block;
+          background-color: blue;
+          color: black;
+        }
+      }
+      @media (min-width: 500px) and (max-width: 700px) {
+        #box2 {
+          display: block;
+          background-color: rgb(140, 255, 0);
+          color: black;
+        }
+      }
+      @media (min-width: 700px) and (max-width: 1000px) {
+        #box3 {
+          display: block;
+          background-color: rgb(255, 4, 0);
+          color: black;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="Box" id="box1">box1 Lorem ipsum dolor sit amet.</div>
+    <div class="Box" id="box2">box2 Lorem ipsum dolor sit amet.</div>
+    <div class="Box" id="box3">box3 Lorem ipsum dolor sit amet.</div>
+    <div class="Box" id="box4">box4 Lorem ipsum dolor sit amet.</div>
+  </body>
+</html>

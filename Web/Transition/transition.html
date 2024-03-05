@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transition</title>
+    <style>
+      body {
+        background-color: black;
+      }
+      .content {
+        display: flex;
+        width: 100px;
+        height: 100px;
+        justify-content: center;
+        align-items: center;
+        background-color: red;
+        transition-property: background-color;
+        transition-duration: 4s;
+        transition-timing-function: ease-in-out;
+      }
+
+      .content:hover {
+        background-color: green;
+        width: 150px;
+        height: 150px;
+        font-size: 15px;
+        background-color: aliceblue;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="content">
+      <h2>css</h2>
+    </div>
+  </body>
+</html>

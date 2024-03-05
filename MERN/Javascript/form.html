@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+</style>
+<body>
+    <form action="">
+        <input class="user" type="text" placeholder="Username">
+        <input class="pass" type="password" placeholder="Password">
+        <button>Submit</button>
+    </form>
+</body>
+<script>
+    let form = document.querySelector("form");
+    form.addEventListener("submit", function(){
+
+        let user = document.querySelector(".user");
+        let pass = document.querySelector(".pass");
+
+        console.log(user.value);
+        console.log(pass.value);
+
+        alert(`The userId is ${user.value} and password is ${pass.value}`);
+    });
+</script>
+</html>
