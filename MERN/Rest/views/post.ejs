@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>All Post</title>
+    <link rel="stylesheet" href="/posts.css" />
+    <!-- Don't provide actual path for css file as path.join() used in index.js -->
+  </head>
+  <body>
+    <h1>Quora Post</h1>
+    <div class="post-container">
+      <% for (post of posts){%>
+      <div class="post">
+        <h3>Username : @<%= post.user %></h3>
+        <h4>Description : <%= post.content %></h4>
+        <a href="http://localhost:8080/posts/view/<%= post.id %>"
+          >View Details</a
+        >
+        &nbsp; &nbsp;
+        <a href="http://localhost:8080/posts/<%= post.id %>/edit">Edit</a>
+        <form method="post" action="/posts/<%= post.id %>?_method=DELETE">
+          <button>Delete</button>
+        </form>
+      </div>
+      <% } %>
+    </div>
+    <br />
+
+    <a href="http://localhost:8080/posts/new">Create new post</a>
+  </body>
+</html>
