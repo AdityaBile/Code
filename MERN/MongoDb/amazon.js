@@ -10,6 +10,7 @@ async function main() {
   await mongoose.connect("mongodb://127.0.0.1:27017/amazon");
 }
 
+// Schema Validation
 const bookSchema = new mongoose.Schema({
   title: {
     type: String,
@@ -40,3 +41,12 @@ book1
   .catch((err) => {
     console.log(err);
   });
+
+/*
+// Validation for Update
+
+Book.findByIdAndUpdate("id", { update }, { runValidators: true })
+  .then((result) => console.log(result))
+  .catch((err) => console.error(err));
+
+  */
