@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chat Messages</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        margin: 0;
+        padding: 0;
+        text-align: center; /* Center align the content */
+      }
+
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center; /* Center align the flex items */
+        margin-top: 20px; /* Add some top margin */
+      }
+
+      h2 {
+        color: #333; /* Set font color */
+      }
+
+      .chat {
+        width: 30%;
+        background-color: #fff;
+        margin: 10px;
+        padding: 10px;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        text-align: left; /* Left align the chat content */
+      }
+
+      .chat h4,
+      .chat p {
+        display: inline-block; /* Display h4 and p elements in a single line */
+        margin: 0; /* Remove default margin */
+      }
+
+      .from,
+      .to,
+      .msg,
+      .date {
+        margin-top: 10px; /* Add some top margin to each section */
+      }
+      button {
+        display: block; /* Display button as block element */
+        margin: 10px auto; /* Center align the button */
+        padding: 5px 10px; /* Add padding to the button */
+        background-color: #007bff; /* Set button background color */
+        color: #fff; /* Set button text color */
+        border: none; /* Remove button border */
+        border-radius: 3px; /* Add border radius to the button */
+        cursor: pointer; /* Change cursor to pointer on hover */
+      }
+
+      .delete {
+        background-color: #e61312;
+      }
+
+      button:hover {
+        background-color: #e6dd12; /* Change background color on hover */
+        color: #333;
+      }
+
+      .delete button:hover {
+        background-color: #e63812; /* Change background color on hover */
+      }
+    </style>
+  </head>
+  <body>
+    <h2>All Chats</h2>
+    <form method="GET" action="/chats/new">
+      <button>Create chat</button>
+    </form>
+    <div class="container">
+      <% for(chat of chats) { %>
+      <div class="chat">
+        <div class="from">
+          <h4>Sender:</h4>
+          <p><%= chat.from %></p>
+        </div>
+        <div class="to">
+          <h4>Receiver:</h4>
+          <p><%= chat.to %></p>
+        </div>
+        <div class="msg">
+          <h4>Message:</h4>
+          <p><%= chat.msg %></p>
+        </div>
+        <div class="date">
+          <h4>Date:</h4>
+          <p><%= chat.dated_at.toString().split(" ")[4]%></p>
+          <!-- 5th element seperated by space get accessed  -->
+          <p><%= chat.dated_at.toString().split(" ").slice(0,4).join(" ")%></p>
+          <!-- slice -> 0 t0 4 element get extracted and join -> seperate each element by space e.g "-,/" -->
+        </div>
+        <form method="GET" action="/chats/<%= chat._id %>/edit">
+          <button>Edit</button>
+        </form>
+        <form method="POST" action="/chats/<%= chat._id %>?_method=DELETE">
+          <button class="delete">Delete</button>
+        </form>
+      </div>
+      <% }; %>
+    </div>
+  </body>
+</html>
