@@ -45,7 +45,7 @@ book1
 /*
 // Validation for Update
 
-Book.findByIdAndUpdate("id", { update }, { runValidators: true })
+Book.findByIdAndUpdate("// id", { //update condition }, { runValidators: true })
   .then((result) => console.log(result))
   .catch((err) => console.error(err));
 
