@@ -7,6 +7,10 @@ const Product = ({ title, price, features = [], quality = {} }) => {
     <>
       <h2>Title : {title}</h2>
       <p>Price: ${price} </p>
+      {/* Conditional statement- */}
+      {price > 25000 ? <p>Discount 5%</p> : null}
+      {/* OR  */}
+      {/* {price > 25000 && <p>Discount 5%</p>} */}
       <h4>Array Items :</h4>
       <p>{list}</p>
       {/* OR */}

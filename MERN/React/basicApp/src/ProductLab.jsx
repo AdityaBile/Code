@@ -5,11 +5,10 @@ const ProductLab = () => {
   let opt = { a: "A", b: "B", c: "C" };
   return (
     <>
-      <Product features={option} />
-      <Product title="Laptop" price={20000} />
-      <Product quality={opt} />
-      {/* Pass value in "curly bracket" so the value will be passed as NUMBER not STRING */}
-      <Product title="Tab" price="50000" />
+      <Product title="Tab" price={50000} features={option} />
+      {/* e.g price="50000" Pass value in "curly bracket" so the value will be passed as NUMBER not STRING */}
+      <br></br>
+      <Product title="Laptop" price={20000} quality={opt} />
     </>
   );
 };
