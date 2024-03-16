@@ -1,14 +1,19 @@
 import React from "react";
-
-// Price default value is 2000
-const Product = ({ title, price = 2000, feature, feature1 = {} }) => {
+// feature = [] -> Array
+// quality = {} -> Object
+const Product = ({ title, price, features = [], quality = {} }) => {
+  let list = features.map((feature) => <li>{feature}</li>);
   return (
-    <div className="Product">
-      <h4>{title}</h4>
-      <p>Price: {price}</p>
-      <p>Features: {feature}</p>
-      <p>Feature1 a: {feature1.a}</p>
-    </div>
+    <>
+      <h2>Title : {title}</h2>
+      <p>Price: ${price} </p>
+      <h4>Array Items :</h4>
+      <p>{list}</p>
+      {/* OR */}
+      {/* <p>{features.map((feature) => <li>{feature}</li>)}</p> */}
+      <h4>Object elements : </h4>
+      <p>{quality.a}</p>
+    </>
   );
 };
 
