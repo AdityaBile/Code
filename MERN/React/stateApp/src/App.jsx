@@ -2,7 +2,9 @@ import "./App.css";
 import UseState from "./UseState";
 // import Heart from "./Heart";
 // import LudoBoard from "./LudoBoard";
-import Todo from "./Todo";
+// import Todo from "./Todo";
+// import Form from "./Form";
+import JokerApi from "./JokerApi";
 
 function App() {
   return (
@@ -10,7 +12,9 @@ function App() {
       {/* <UseState /> */}
       {/* <Heart /> */}
       {/* <LudoBoard /> */}
-      <Todo />
+      {/* <Todo /> */}
+      {/* <Form /> */}
+      <JokerApi />
     </>
   );
 }
