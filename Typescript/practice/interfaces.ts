@@ -19,3 +19,5 @@ class Person implements Greet {
 
 let user1 = new Person("John");
 console.log(user1);
+
+// Inheritance
