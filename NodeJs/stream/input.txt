@@ -1,3 +1,0 @@
-hi welcome to node series
-
-Today we are looking stream
